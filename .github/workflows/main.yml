@@ -1,0 +1,15 @@
+name: Website Mirror
+on: [issues]
+  types: [created]
+jobs:
+    build:
+        name: Setup Environment for Mirroring
+        runs-on: ubuntu-latest
+        steps:
+             - uses: actions/checkout@v1
+             - uses: ./
+               env:
+                  URL: ${{ secrets.MIRROR_URL }}
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  USER_NAME: ${{ secrets.GITHUB_USER }}
+                  USER_EMAIL: ${{ secrets.GITHUB_USER_EMAIL }}

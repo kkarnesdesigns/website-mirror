@@ -1,0 +1,11 @@
+name: "Mirror website"
+description: "Mirror website from URL"
+author: "@Pavneet-Sing"
+
+branding:
+    icon: "activity"
+    color: "white"
+
+runs:
+    using: "docker"
+    image: "Dockerfile"
