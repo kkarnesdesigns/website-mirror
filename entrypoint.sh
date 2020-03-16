@@ -5,7 +5,7 @@ apt-get update
 apt install wget curl git -y
 export LANG=en_US.UTF-8
 REPO=$( echo "$URL" | sed -e "s/\([^/]*\/\/\)\?\(www\.\)\?\([^.]*\)\..*/\3/")
-wget --mirror -p --convert-links $URL
+wget -mpk $URL
 curl \
 	-H "Authorization: token $_GITHUB_TOKEN" https://api.github.com/user/repos \
 	-d '{"name":"'$REPO'-website","private":false}'
