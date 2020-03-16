@@ -10,8 +10,9 @@ Use the below code and make sure to add the required details in the workflow \| 
 
 ```yaml
 name: Website Mirror
-on: [issues]
-  types: [created]
+on: 
+  issues:
+    types: [opened]
 jobs:
     build:
         name: Setup Environment for Mirroring
@@ -20,8 +21,8 @@ jobs:
              - uses: actions/checkout@v1
              - uses: ./
                env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-                  URL: ${{ secrets.URL }}
+                  URL: ${{ secrets.MIRROR_URL }}
+                  _GITHUB_TOKEN: ${{ secrets._GITHUB_TOKEN }}
                   USER_NAME: ${{ secrets.GITHUB_USER }}
                   USER_EMAIL: ${{ secrets.GITHUB_USER_EMAIL }}
 ```
@@ -30,7 +31,7 @@ jobs:
 
 | name | secret_reference | type | required | description |
 | ---- | ---------------- | ----- | ------- | ----------- |
-|  GITHUB_TOKEN | `${{ secrets.GITHUB_TOKEN }}` | string | Y | Token to access github account|
+|  GITHUB_TOKEN | `${{ secrets._GITHUB_TOKEN }}` | string | Y | Token to access github account|
 | URL | `${{ secrets.URL }}` | string | Y | HostName of the website |
 | USER_NAME | `${{ secrets.USER }}` | string | Y | Github usernam |
 | USER_EMAIL | `${{ secrets.USER }}` | string | Y | Github email |

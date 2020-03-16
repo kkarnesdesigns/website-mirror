@@ -1,7 +1,7 @@
 name: Website Mirror
 on: 
   issues:
-    types: [created]
+    types: [opened]
 jobs:
     build:
         name: Setup Environment for Mirroring
@@ -11,6 +11,6 @@ jobs:
              - uses: ./
                env:
                   URL: ${{ secrets.MIRROR_URL }}
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  _GITHUB_TOKEN: ${{ secrets._GITHUB_TOKEN }}
                   USER_NAME: ${{ secrets.GITHUB_USER }}
                   USER_EMAIL: ${{ secrets.GITHUB_USER_EMAIL }}
