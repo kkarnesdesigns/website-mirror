@@ -1,6 +1,7 @@
 name: Website Mirror
-on: [issues]
-  types: [created]
+on: 
+  issues:
+    types: [created]
 jobs:
     build:
         name: Setup Environment for Mirroring
