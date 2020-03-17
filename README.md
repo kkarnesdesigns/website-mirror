@@ -1,5 +1,7 @@
 <h1 align="center">Website Mirror</h1>
 
+![Preview_image](https://repository-images.githubusercontent.com/247682655/4f5b3700-67de-11ea-96d3-55bce539c6d1)
+
 A handy action to copy the website from the given URL and push it to new github repo using credentials.
 
 It will convert the urls to local downloaded resources and keep the log in an external file `download.log`.
