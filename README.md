@@ -33,10 +33,10 @@ jobs:
 
 | name | secret_reference | type | required | description |
 | ---- | ---------------- | ----- | ------- | ----------- |
-|  GITHUB_TOKEN | `${{ secrets._GITHUB_TOKEN }}` | string | Y | Token to access github account|
-| URL | `${{ secrets.URL }}` | string | Y | HostName of the website |
-| USER_NAME | `${{ secrets.USER }}` | string | Y | Github usernam |
-| USER_EMAIL | `${{ secrets.USER }}` | string | Y | Github email |
+|  _GITHUB_TOKEN | `${{ secrets._GITHUB_TOKEN }}` | string | Y | Token to access github account|
+| URL | `${{ secrets.MIRROR_URL }}` | string | Y | HostName of the website |
+| USER_NAME | `${{ secrets.GITHUB_USER }}` | string | Y | Github usernam |
+| USER_EMAIL | `${{ secrets.GITHUB_USER_EMAIL }}` | string | Y | Github email |
 
 
 ### Usage
