@@ -8,7 +8,7 @@ It will convert the urls to locally downloaded resources and keep the log in an 
 
 ### Mirror Website Configuration
 
-Use the below code and make sure to add the required details in the workflow \| account.
+Use the below workflow config and make sure to add the required details in the workflow \| account.
 
 ```yaml
 name: Website Mirror
@@ -40,7 +40,7 @@ jobs:
 
 
 ### Usage
-1. Fork Project
+1. Fork website-mirror project
 2. Configure the required parameters
 3. Commit your changes
 4. Create an issue to initiate mirroring
