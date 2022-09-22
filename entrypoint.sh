@@ -5,7 +5,7 @@ apt-get update
 apt install wget curl git -y
 export LANG=en_US.UTF-8
 REPO=$( echo "$URL" | sed -e "s/\([^/]*\/\/\)\?\(www\.\)\?\([^.]*\)\..*/\3/")
-wget -E -H -k -K -p ./LOCAL $URL
+wget -E -H -k -K -p $URL
 cd LOCAL
 cd $(ls)
 curl \
@@ -14,7 +14,6 @@ curl \
 git init
 git config --global user.name "kkarnesdesigns"
 git config --global user.email "kyle@kkarnesdesigns.com"
-git config --global --add safe.directory "*"
 git add .
 git commit -m "initialize website repo"
 git push -u https://$_GITHUB_TOKEN:x-oauth-basic@github.com/kkarnesdesigns/$REPO-website.git master
