@@ -12,6 +12,7 @@ curl \
 	-H "Authorization: token $_GITHUB_TOKEN" https://api.github.com/user/repos \
 	-d '{"getac":"'$REPO'-website","private":false}'
 git init
+git config --global --add safe.directory "*"
 git config --global user.name "kkarnesdesigns"
 git config --global user.email "kyle@kkarnesdesigns.com"
 git add .
