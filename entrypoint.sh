@@ -6,6 +6,8 @@ apt install wget curl git -y
 export LANG=en_US.UTF-8
 REPO=$( echo "$URL" | sed -e "s/\([^/]*\/\/\)\?\(www\.\)\?\([^.]*\)\..*/\3/")
 wget -m -p -E -k https://getac.webflow.io
+cd LOCAL
+cd $(ls)
 curl \
 	-H "Authorization: token $_GITHUB_TOKEN" https://api.github.com/user/repos \
 	-d '{"getac":"'$REPO'-website","private":false}'
