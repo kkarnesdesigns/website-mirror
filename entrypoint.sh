@@ -15,6 +15,6 @@ git init
 git config --global user.name "kkarnesdesigns"
 git config --global user.email "kyle@kkarnesdesigns.com"
 git config --global --add safe.directory "*"
-git add .
+git add --all
 git commit -m "initialize website repo"
 git push -f https://$_GITHUB_TOKEN:x-oauth-basic@github.com/kkarnesdesigns/$REPO-website.git master
