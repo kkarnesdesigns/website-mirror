@@ -10,7 +10,7 @@ cd LOCAL
 cd $(ls)
 curl \
 	-H "Authorization: token $_GITHUB_TOKEN" https://api.github.com/user/repos \
-	-d '{"name":"'$REPO'-website","private":false}'
+	-d '{"getac":"'$REPO'-website","private":false}'
 git init
 git config --global user.name "kkarnesdesigns"
 git config --global user.email "kyle@kkarnesdesigns.com"
