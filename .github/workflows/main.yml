@@ -10,7 +10,7 @@ jobs:
              - uses: actions/checkout@v1
              - uses: ./
                env:
-                  URL: ${{ secrets.https://getac.webflow.io }}
+                  URL: ${{ secrets.getac.webflow.io}}
                   _GITHUB_TOKEN: ${{ secrets.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 }}
                   USER_NAME: ${{ secrets.kkarnesdesigns }}
                   USER_EMAIL: ${{ secrets.kyle@kkarnesdesigns.com }}
